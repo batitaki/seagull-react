@@ -1,24 +1,25 @@
 import React, { Component } from 'react';
+import './metrics.css';
 
-class ProductMetrics extends Component {
+class EscuelaMetrics extends Component {
   constructor() {
     super();
     this.state = {
-      totalProductos: 0,
-      producto: [],
+      totalEscuelas: 0,
+      escuela: [],
       loading: true,
     };
   }
 
   async componentDidMount() {
     try {
-      const response = await fetch('http://localhost:3002/api/producto'); // Reemplaza la URL con la URL correcta de tu backend
+      const response = await fetch('http://localhost:3002/api/escuela'); // Reemplaza la URL con la URL correcta de tu backend
       if (response.ok) {
         const data = await response.json();
-  
+
         this.setState({
-          totalProductos: data.total,
-          producto: data.data, // Asegúrate de que "data" se esté inicializando correctamente
+          totalEscuelas: data.total,
+          escuela: data.data, // Asegúrate de que "data" se esté inicializando correctamente
           loading: false,
         });
       } else {
@@ -34,21 +35,21 @@ class ProductMetrics extends Component {
       });
     }
   }
-  
+
   render() {
-    const { loading, totalProductos, producto } = this.state;
+    const { loading, totalEscuelas, escuela } = this.state;
 
     if (loading) {
       return <div>Cargando...</div>;
     }
 
     return (
-      <div>
-        <h1>Métricas de Productos</h1>
-        <p>Total de productos: {totalProductos}</p>
+      <div className="metrics-container">
+        <h1>Métricas de Escuelas</h1>
+        <p>Total de escuelas: {totalEscuelas}</p>
         <ul>
-          {producto.map(producto => (
-            <li key={producto.id}>{producto.nombre}</li>
+          {escuela.map(escuela => (
+            <li key={escuela.id}>{escuela.nombre}</li>
           ))}
         </ul>
       </div>
@@ -56,4 +57,4 @@ class ProductMetrics extends Component {
   }
 }
 
-export default ProductMetrics;
+export default EscuelaMetrics;

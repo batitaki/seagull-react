@@ -1,13 +1,15 @@
 import React from 'react';
-import EscuelaMetrics from './components/escuelaMetrics';
-import ProductMetrics from './components/productMetrics'; // Importa el componente ProductMetrics
+import EscuelaMetrics from './components/metrics/escuelaMetrics';
+import ProductMetrics from './components/metrics/productMetrics'; 
+import Navbar from './components/navbar/Navbar'; 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <ProductMetrics /> {/* Aquí incluyes el componente ProductMetrics */}
-        <EscuelaMetrics/>
+        <Navbar />
+        <EscuelaMetrics />
+        <ProductMetrics />
       </header>
     </div>
   );
