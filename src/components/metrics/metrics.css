@@ -1,8 +1,41 @@
-/* EscuelaMetrics.css */
 .metrics-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Ajusta la altura según tu diseño */
+  height: 90vh;
+  background-color: #45b9d9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+}
+.titulo{
+  width: 200px;
+  height: 200px;
+  background-color: #164d5c;
+  border-radius: 15px;
+}
+.metrics-list {
+  text-align: left;
+  max-width: 1000px;
+  margin-top: 20px;
+  background-color: green;
+  border-radius: 15px;
+}
+
+.metrics-list p {
+  font-weight: bold;
+}
+
+.metrics-list ul {
+  list-style-type: disc;
+  margin-left: 0px;
+  margin-right: 50;
+}
+
+.metrics-list .columns {
+  column-count: 6;
+  column-gap: 100px;
+  list-style-type: disc;
 }

@@ -8,18 +8,19 @@ class EscuelaMetrics extends Component {
       totalEscuelas: 0,
       escuela: [],
       loading: true,
+      showMetrics: false, // Agregamos un estado para controlar la visibilidad de las métricas
     };
   }
 
   async componentDidMount() {
     try {
-      const response = await fetch('http://localhost:3002/api/escuela'); // Reemplaza la URL con la URL correcta de tu backend
+      const response = await fetch('http://localhost:3002/api/escuela');
       if (response.ok) {
         const data = await response.json();
 
         this.setState({
           totalEscuelas: data.total,
-          escuela: data.data, // Asegúrate de que "data" se esté inicializando correctamente
+          escuela: data.data,
           loading: false,
         });
       } else {
@@ -36,22 +37,35 @@ class EscuelaMetrics extends Component {
     }
   }
 
-  render() {
-    const { loading, totalEscuelas, escuela } = this.state;
+  // Función para mostrar las métricas al hacer clic en el botón
+  toggleMetrics = () => {
+    this.setState({ showMetrics: !this.state.showMetrics });
+  }
 
-    if (loading) {
-      return <div>Cargando...</div>;
-    }
+  render() {
+    const { loading, totalEscuelas, escuela, showMetrics } = this.state;
 
     return (
       <div className="metrics-container">
-        <h1>Métricas de Escuelas</h1>
-        <p>Total de escuelas: {totalEscuelas}</p>
-        <ul>
-          {escuela.map(escuela => (
-            <li key={escuela.id}>{escuela.nombre}</li>
-          ))}
-        </ul>
+        {/* Convertimos el título en un botón */}
+        <button className='titulo' onClick={this.toggleMetrics}>
+          Mostrar Métricas de Escuelas
+        </button>
+
+        {showMetrics && ( // Mostramos las métricas solo si showMetrics es true
+          loading ? (
+            <p>Cargando...</p>
+          ) : (
+            <div className="metrics-list">
+              <p>Total de escuelas: {totalEscuelas}</p>
+              <ul className="columns">
+                {escuela.map((escuela, index) => (
+                  <li key={escuela.id}>{escuela.nombre}</li>
+                ))}
+              </ul>
+            </div>
+          )
+        )}
       </div>
     );
   }
