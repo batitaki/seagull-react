@@ -13,14 +13,18 @@ body {
   margin: 0 auto; /* Centra el contenido en el medio de la página */
   padding: 20px;
 }
-.headerParent{
-  background-image: url(/public/surfNavbar.jpg);
-  height: 200px;
-  width: 100%;
-  opacity: 0.8;
-  background-size: cover; /* Ajusta la imagen para cubrir todo el header */
-  background-repeat: no-repeat; /* Evita la repetición de la imagen */
+.headerParent {
+ background-color: #ae581f;
 }
+.App-header{
+  background-image: url(/public/surfNavbar.jpg);
+  height: 200px; /* Ajusta la altura según el tamaño de la imagen */
+  max-width: 2200px;
+  opacity: 0.8;
+  background-size: contain; /* Ajusta la imagen al tamaño del header sin recortar */
+  background-repeat: no-repeat;
+}
+
 
 .metrics-container {
   display: flex; /* Coloca los componentes de métricas uno al lado del otro */

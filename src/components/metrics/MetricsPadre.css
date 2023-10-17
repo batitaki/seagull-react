@@ -3,11 +3,11 @@
 .parent-container {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #383c3d;
+    background-color: #397a94;
     margin-top: 100px;
+    border-radius: 8px;
   }
   
   /* Add more styles as needed */

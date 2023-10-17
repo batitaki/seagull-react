@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './escuelaMetrics.css';
+import './metrics.css';
 
 
 function EscuelaMetrics() {
@@ -45,7 +45,7 @@ function EscuelaMetrics() {
           <p>Cargando...</p>
         ) : (
           <div className="metrics-list2">
-            <p>Total de escuelas: {totalEscuelas}</p>
+            <p className='total'>TOTAL DE ESCUELAS: {totalEscuelas}</p>
             <ul className="product-list2">
               {escuela.map((escuela, index) => (
                 <li key={escuela.id}>{escuela.nombre}</li>
