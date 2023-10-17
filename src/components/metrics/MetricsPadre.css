@@ -1,0 +1,14 @@
+/* MetricsPadre.css */
+
+.parent-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #383c3d;
+    margin-top: 100px;
+  }
+  
+  /* Add more styles as needed */
+  

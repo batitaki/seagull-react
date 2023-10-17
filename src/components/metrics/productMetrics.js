@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './metrics.css';
+import './escuelaMetrics.css';
 
 function ProductMetrics() {
   const [totalProductos, setTotalProductos] = useState(0);
@@ -34,8 +34,8 @@ function ProductMetrics() {
   };
 
   return (
-    <div className="metrics-container">
-      <button className='titulo' onClick={toggleMetrics}>
+    <div className="metrics-container2">
+      <button className='titulo2' onClick={toggleMetrics}>
         Mostrar Métricas de Productos
       </button>
 
@@ -43,9 +43,9 @@ function ProductMetrics() {
         loading ? (
           <p>Cargando...</p>
         ) : (
-          <div className="metrics-list">
+          <div className="metrics-list2">
             <p>Total de productos: {totalProductos}</p>
-            <ul className="product-list">
+            <ul className="product-list2">
               {producto.map((product, index) => (
                 <li key={product.id}>{product.nombre}</li>
               ))}

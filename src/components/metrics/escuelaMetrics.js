@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './escuelaMetrics.css';
 
+
 function EscuelaMetrics() {
   const [totalEscuelas, setTotalEscuelas] = useState(0);
   const [escuela, setEscuela] = useState([]);
@@ -56,5 +57,6 @@ function EscuelaMetrics() {
     </div>
   );
 }
+
 
 export default EscuelaMetrics;
