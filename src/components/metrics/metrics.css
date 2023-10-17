@@ -1,41 +1,33 @@
+/* metrics.css */
+
 .metrics-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 90vh;
-  background-color: #45b9d9;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
-  margin: 20px;
+  float: right; /* Para colocar el componente a la derecha de la página */
+  margin-right: 20px; /* Espacio entre el componente y el borde derecho de la página */
+  text-align: center; /* Alinear el contenido al centro */
 }
-.titulo{
-  width: 200px;
-  height: 200px;
-  background-color: #164d5c;
-  border-radius: 15px;
+
+.titulo {
+  background-color: #ff5722; /* Cambiar el color de fondo del botón */
+  color: white; /* Cambiar el color del texto del botón */
+  padding: 10px 20px; /* Añadir espacio alrededor del botón */
+  font-size: 16px; /* Tamaño de fuente del botón */
+  font-weight: bold; /* Hacer el texto en negrita */
+  border: none; /* Eliminar el borde del botón */
+  cursor: pointer; /* Cambiar el cursor al pasar por encima del botón */
 }
+
 .metrics-list {
-  text-align: left;
-  max-width: 1000px;
-  margin-top: 20px;
-  background-color: green;
-  border-radius: 15px;
+  background-color: #f2f2f2; /* Cambiar el color de fondo de la lista de métricas */
+  padding: 10px; /* Añadir espacio alrededor de la lista de métricas */
+  font-size: 14px; /* Tamaño de fuente de la lista de métricas */
 }
 
-.metrics-list p {
-  font-weight: bold;
+.product-list {
+  list-style-type: none; /* Eliminar viñetas de la lista de escuelas */
+    padding: 0;
+    margin: 0;
 }
 
-.metrics-list ul {
-  list-style-type: disc;
-  margin-left: 0px;
-  margin-right: 50;
-}
-
-.metrics-list .columns {
-  column-count: 6;
-  column-gap: 100px;
-  list-style-type: disc;
+.product-list li {
+  margin: 5px 0; /* Espacio entre elementos de la lista */
 }
