@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './metrics.css';
+import './metricsPadre.css';
 
-function ProductMetrics() {
+function ProductMetricsComponent() {
   const [totalProductos, setTotalProductos] = useState(0);
   const [producto, setProducto] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -13,6 +13,7 @@ function ProductMetrics() {
         const response = await fetch('http://localhost:3002/api/producto');
         if (response.ok) {
           const data = await response.json();
+          console.log('Respuesta de la API:', data);
           setTotalProductos(data.total);
           setProducto(data.data);
           setLoading(false);
@@ -33,9 +34,20 @@ function ProductMetrics() {
     setShowMetrics(!showMetrics);
   };
 
+  // Código para agrupar productos por categoría
+  const productosPorCategoria = {};
+
+  producto.forEach((product) => {
+    const { categoria } = product;
+    if (!productosPorCategoria[categoria]) {
+      productosPorCategoria[categoria] = [];
+    }
+    productosPorCategoria[categoria].push(product);
+  });
+
   return (
     <div className="metrics-container">
-      <button className='titulo' onClick={toggleMetrics}>
+      <button className="titulo" onClick={toggleMetrics}>
         Mostrar Métricas de Productos
       </button>
 
@@ -44,12 +56,19 @@ function ProductMetrics() {
           <p>Cargando...</p>
         ) : (
           <div className="metrics-list">
-            <p className='total'>TOTAL DE PRODUCTOS: {totalProductos}</p>
-            <ul className="product-list">
-              {producto.map((product, index) => (
-                <li key={product.id}>{product.nombre}</li>
-              ))}
-            </ul>
+            <p className="total">TOTAL DE PRODUCTOS: {totalProductos}</p>
+            {Object.keys(productosPorCategoria).map((categoria) => (
+              <div key={categoria}>
+                <h2>Categoría: {categoria}</h2>
+                <ul className="product-list">
+                  {productosPorCategoria[categoria].map((product) => (
+                    <li key={product.id}>
+                      {product.nombre} - Categoría: {product.categoria}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         )
       )}
@@ -57,4 +76,4 @@ function ProductMetrics() {
   );
 }
 
-export default ProductMetrics;
+export default ProductMetricsComponent;

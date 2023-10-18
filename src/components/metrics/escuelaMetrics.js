@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './metrics.css';
 
 
-function EscuelaMetrics() {
+function EscuelaMetricsComponent() {
   const [totalEscuelas, setTotalEscuelas] = useState(0);
   const [escuela, setEscuela] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -59,4 +59,4 @@ function EscuelaMetrics() {
 }
 
 
-export default EscuelaMetrics;
+export default EscuelaMetricsComponent;

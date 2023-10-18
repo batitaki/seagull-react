@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import logo from './logoseagull.png';
-import MetricsPadre from '../metrics/metricsPadre'
 import './Navbar.css';
 
 function Navbar({ onEscuelaClick, onProductClick }) {
   const [isExpanded, setExpanded] = useState(false);
 
   const toggleNavbarAndOptions = (e) => {
-    e.preventDefault(); // Evita la acción predeterminada del enlace
+    e.preventDefault();
     setExpanded(!isExpanded);
   };
 
@@ -15,7 +14,7 @@ function Navbar({ onEscuelaClick, onProductClick }) {
     <div className={`sidebar ${isExpanded ? 'navbar-expanded' : ''}`}>
       <nav className="navbar">
         <a className="navbar-brand" href="/">
-        <img src={logo} alt="" width="45" height="34" style={{ margin: '10px' }} />
+          <img src={logo} alt="" width="45" height="34" style={{ margin: '10px' }} />
         </a>
         <div className="navbar-nav">
           <ul className="navbar-nav">
@@ -33,11 +32,12 @@ function Navbar({ onEscuelaClick, onProductClick }) {
                 id="artOptions"
                 style={{ display: isExpanded ? 'block' : 'none' }}
               >
-                <a className="nav-link" href="" onClick={onEscuelaClick}>
-                  
-                  METRICAS
+                <a className="nav-link" href="#" onClick={onProductClick}>
+                  Métricas de Productos
                 </a>
-               
+                <a className="nav-link" href="#" onClick={onEscuelaClick}>
+                  Métricas de Escuelas
+                </a>
                 {/* Resto de tus opciones */}
               </div>
             </li>
