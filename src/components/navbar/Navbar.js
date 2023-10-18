@@ -38,7 +38,7 @@ function Navbar({ onEscuelaClick, onProductClick }) {
                 <a className="nav-link" href="#" onClick={onEscuelaClick}>
               ESCUELAS
                 </a>
-                {/* Resto de tus opciones */}
+
               </div>
             </li>
           </ul>

@@ -3,9 +3,13 @@
     margin-right: 20px; 
     text-align: center; 
   }
-  
+  .enlace {
+    text-decoration: none;
+    color: #000;
+  }
+
   .titulo {
-    background-color: rgba(28, 28, 102, 0.7); /* Agregar opacidad al color de fondo */
+    background-color: rgba(28, 28, 102, 0.7); 
     color: white;
     padding: 10px 20px;
     font-size: 16px;
@@ -15,11 +19,11 @@
     margin-right: 190px;
     margin-top: 20px;
     border-radius: 4px;
-    transition: background-color 0.3s; /* Agregar una transición suave al cambio de color de fondo */
+    transition: background-color 0.3s; 
   }
   
   .titulo:hover {
-    background-color: rgba(28, 28, 102, 1); /* Cambiar el color de fondo al pasar el mouse para mostrar el botón de manera más sólida */
+    background-color: rgba(28, 28, 102, 1); 
   }
   
   .total{
@@ -37,7 +41,19 @@
     text-align: left;
 
   }
-  
+  .metrics-list-details {
+    background-color: #ffd5d5;
+    padding: 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    text-align: left;
+    max-width: 250px;
+    position: absolute; 
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+  }
+
   .product-list {
     list-style-type: none; 
       padding: 0;

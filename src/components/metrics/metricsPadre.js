@@ -6,12 +6,12 @@ function MetricsPadre() {
 
   const toggleProductMetrics = () => {
     setShowProductMetrics(!showProductMetrics);
-    setShowEscuelaMetrics(false); // Asegúrate de ocultar las métricas de escuelas al mostrar las de productos.
+    setShowEscuelaMetrics(false); 
   };
 
   const toggleEscuelaMetrics = () => {
     setShowEscuelaMetrics(!showEscuelaMetrics);
-    setShowProductMetrics(false); // Asegúrate de ocultar las métricas de productos al mostrar las de escuelas.
+    setShowProductMetrics(false); 
   };
 
   return (

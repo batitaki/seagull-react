@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './metrics.css';
 
-
 function EscuelaMetricsComponent() {
   const [totalEscuelas, setTotalEscuelas] = useState(0);
   const [escuela, setEscuela] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showMetrics, setShowMetrics] = useState(false);
+  const [selectedEscuela, setSelectedEscuela] = useState(null);
 
   useEffect(() => {
     async function fetchEscuelaData() {
@@ -34,6 +34,20 @@ function EscuelaMetricsComponent() {
     setShowMetrics(!showMetrics);
   };
 
+  const loadEscuelaDetails = async (escuelaId) => {
+    try {
+      const response = await fetch(`http://localhost:3002/api/escuela/${escuelaId}`);
+      if (response.ok) {
+        const escuelaData = await response.json();
+        setSelectedEscuela(escuelaData.data);
+      } else {
+        console.error('Error al obtener detalles de la escuela');
+      }
+    } catch (error) {
+      console.error('Error al obtener detalles de la escuela', error);
+    }
+  };
+
   return (
     <div className="metrics-container">
       <button className='titulo' onClick={toggleMetrics}>
@@ -41,22 +55,35 @@ function EscuelaMetricsComponent() {
       </button>
 
       {showMetrics && (
-        loading ? (
-          <p>Cargando...</p>
-        ) : (
+        <div className="metrics-list-container">
           <div className="metrics-list">
             <p className='total'>TOTAL DE ESCUELAS: {totalEscuelas}</p>
             <ul className="product-list">
-              {escuela.map((escuela, index) => (
-                <li key={escuela.id}>{escuela.nombre}</li>
+              {escuela.map((escuelaItem) => (
+                <li key={escuelaItem.id}>
+                  <a className="enlace"
+                    href="#"
+                    onClick={() => loadEscuelaDetails(escuelaItem.id)}
+                    style={{ textDecoration: 'underline', cursor: 'pointer' }}
+                  >
+                    {escuelaItem.nombre}
+                  </a>
+                </li>
               ))}
             </ul>
           </div>
-        )
+          <div className="metrics-list-details">
+            {selectedEscuela && (
+              <div className="selected-escuela-details">
+                <p className='description'>Nombre: {selectedEscuela.nombre}</p>
+                <p className='description'>Descripción: {selectedEscuela.descripcion}</p>
+              </div>
+            )}
+          </div>
+        </div>
       )}
     </div>
   );
 }
-
 
 export default EscuelaMetricsComponent;

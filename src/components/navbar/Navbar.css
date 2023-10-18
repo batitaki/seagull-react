@@ -1,7 +1,3 @@
-*{
-  font-family: 'Roboto Mono', monospace;
-}
-
 .sidebar {
   position: fixed;
   top: 0;
@@ -36,7 +32,9 @@
   font-size: 30px;
   font-family: 'Oswald', sans-serif;
 }
-
+.description {
+  color: black; 
+}
 
 .clearfix::after {
   content: "";
