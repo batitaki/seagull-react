@@ -1,4 +1,3 @@
-
 .sidebar {
   position: fixed;
   top: 0;
@@ -6,10 +5,9 @@
   bottom: 0;
   width: 70px; /* Ancho de la barra de navegación */
   background-color: #fff; /* Cambia el color de fondo según tu preferencia */
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column; /* Los elementos se apilan verticalmente */
-  background-color: #515151;
-  opacity: 2;
 }
 
 /* Estilo para el contenido dentro de "Art" */
@@ -28,7 +26,7 @@
 
 
 .navbar-expanded {
-  width: 205px; 
+  width: 300px; 
 }
 .art-options {
   font-size: 30px; /* Tamaño de letra personalizado */

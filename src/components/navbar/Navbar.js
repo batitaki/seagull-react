@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logo from './logoseagull.png';
+import MetricsPadre from '../metrics/metricsPadre'
 import './Navbar.css';
 
 function Navbar({ onEscuelaClick, onProductClick }) {
@@ -32,12 +33,11 @@ function Navbar({ onEscuelaClick, onProductClick }) {
                 id="artOptions"
                 style={{ display: isExpanded ? 'block' : 'none' }}
               >
-                <a className="nav-link" href="/" onClick={onEscuelaClick}>
-                  ESCUELAS
+                <a className="nav-link" href="" onClick={onEscuelaClick}>
+                  
+                  METRICAS
                 </a>
-                <a className="nav-link" href="/" onClick={onProductClick}>
-                  PRODUCTOS
-                </a>
+               
                 {/* Resto de tus opciones */}
               </div>
             </li>

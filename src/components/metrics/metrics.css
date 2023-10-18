@@ -1,12 +1,12 @@
 /* metrics.css */
 
-.metrics-container2 {
+.metrics-container {
     float: right; /* Para colocar el componente a la derecha de la página */
     margin-right: 20px; /* Espacio entre el componente y el borde derecho de la página */
     text-align: center; /* Alinear el contenido al centro */
   }
   
-  .titulo2 {
+  .titulo {
     background-color: rgb(125, 125, 133); /* Cambiar el color de fondo del botón */
     color: white; /* Cambiar el color del texto del botón */
     padding: 10px 20px; /* Añadir espacio alrededor del botón */
@@ -23,7 +23,7 @@ color: black;
 font-style: italic;
 text-decoration: underline;
   }
-  .metrics-list2 {
+  .metrics-list {
     background-color: #ffd5d5; /* Cambiar el color de fondo de la lista de métricas */
     padding: 20px; /* Añadir espacio alrededor de la lista de métricas */
     font-size: 14px; /* Tamaño de fuente de la lista de métricas */
@@ -33,13 +33,13 @@ text-decoration: underline;
 
   }
   
-  .product-list2 {
+  .product-list {
     list-style-type: none; /* Eliminar viñetas de la lista de escuelas */
       padding: 0;
       margin: 0;
   }
   
-  .product-list2 li {
+  .product-list li {
     margin: 5px 0; /* Espacio entre elementos de la lista */
   }
   

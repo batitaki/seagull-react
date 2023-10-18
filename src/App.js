@@ -8,9 +8,7 @@ function App() {
     <body>
     <div className="App">
       <div className='headerParent'>
-      <header className="App-header">
         <Navbar />
-      </header>
       </div>
       <MetricsPadre />
     </div>

@@ -35,8 +35,8 @@ function EscuelaMetrics() {
   };
 
   return (
-    <div className="metrics-container2">
-      <button className='titulo2' onClick={toggleMetrics}>
+    <div className="metrics-container">
+      <button className='titulo' onClick={toggleMetrics}>
         Mostrar Métricas de Escuelas
       </button>
 
@@ -44,9 +44,9 @@ function EscuelaMetrics() {
         loading ? (
           <p>Cargando...</p>
         ) : (
-          <div className="metrics-list2">
+          <div className="metrics-list">
             <p className='total'>TOTAL DE ESCUELAS: {totalEscuelas}</p>
-            <ul className="product-list2">
+            <ul className="product-list">
               {escuela.map((escuela, index) => (
                 <li key={escuela.id}>{escuela.nombre}</li>
               ))}
