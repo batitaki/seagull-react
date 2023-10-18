@@ -25,7 +25,7 @@ function Navbar({ onEscuelaClick, onProductClick }) {
                 id="artistasDropdown"
                 onClick={toggleNavbarAndOptions}
               >
-                ||||
+                ||||||||||
               </a>
               <div
                 className={`art-options`}

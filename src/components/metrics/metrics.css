@@ -19,7 +19,8 @@
     margin-right: 190px;
     margin-top: 20px;
     border-radius: 4px;
-    transition: background-color 0.3s; 
+    transition: background-color 0.3s;
+    font-family: 'Roboto Mono', monospace; 
   }
   
   .titulo:hover {
@@ -39,7 +40,7 @@
     margin-top: 20px;
     border-radius: 4px;
     text-align: left;
-
+    font-family: 'Roboto Mono', monospace; 
   }
   .metrics-list-details {
     background-color: #ffd5d5;
@@ -52,6 +53,7 @@
     top: 50%;
     left: 50%; 
     transform: translate(-50%, -50%); 
+    font-family: 'Roboto Mono', monospace; 
   }
 
   .product-list {
