@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from './components/navbar/Navbar';
 import ProductMetricsComponent from './components/metrics/productMetrics'; 
 import EscuelaMetricsComponent from './components/metrics/escuelaMetrics'; 
+import backgroundImage from './imagen-fondo.jpg'; 
 import './App.css';
 
 function App() {
@@ -23,9 +24,9 @@ function App() {
       <div className='headerParent'>
         <Navbar onProductClick={handleProductClick} onEscuelaClick={handleEscuelaClick} />
       </div>
-
-      {showProductMetrics && <ProductMetricsComponent />}
-      {showEscuelaMetrics && <EscuelaMetricsComponent />} 
+      <img src={backgroundImage} alt="" style={{ width: '100%', height: '190vh', position:'absolute', top: 0, left: 0, zIndex: -1 }} />
+      {showProductMetrics && <ProductMetricsComponent style={{ zIndex: 1 }} />} 
+      {showEscuelaMetrics && <EscuelaMetricsComponent style={{ zIndex: 1 }} />}
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './metricsPadre.css';
+import './metrics.css';
 
 function ProductMetricsComponent() {
   const [totalProductos, setTotalProductos] = useState(0);

@@ -25,7 +25,7 @@ function Navbar({ onEscuelaClick, onProductClick }) {
                 id="artistasDropdown"
                 onClick={toggleNavbarAndOptions}
               >
-                |||||||||||
+                ||||
               </a>
               <div
                 className={`art-options`}
@@ -33,10 +33,10 @@ function Navbar({ onEscuelaClick, onProductClick }) {
                 style={{ display: isExpanded ? 'block' : 'none' }}
               >
                 <a className="nav-link" href="#" onClick={onProductClick}>
-                  Métricas de Productos
+              PRODUCTOS
                 </a>
                 <a className="nav-link" href="#" onClick={onEscuelaClick}>
-                  Métricas de Escuelas
+              ESCUELAS
                 </a>
                 {/* Resto de tus opciones */}
               </div>

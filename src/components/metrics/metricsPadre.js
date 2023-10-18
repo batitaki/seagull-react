@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './metricsPadre.css';
 
 function MetricsPadre() {
   const [showProductMetrics, setShowProductMetrics] = useState(false);

@@ -1,16 +1,19 @@
+*{
+  font-family: 'Roboto Mono', monospace;
+}
+
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
-  width: 70px; /* Ancho de la barra de navegación */
-  background-color: #fff; /* Cambia el color de fondo según tu preferencia */
+  width: 70px;
+  background-color: #fff; 
   box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
   display: flex;
-  flex-direction: column; /* Los elementos se apilan verticalmente */
+  flex-direction: column; 
 }
 
-/* Estilo para el contenido dentro de "Art" */
 .navbar-nav {
   list-style: none;
   padding: 10px 0;
@@ -26,10 +29,11 @@
 
 
 .navbar-expanded {
-  width: 300px; 
+  width: 220px; 
 }
+
 .art-options {
-  font-size: 30px; /* Tamaño de letra personalizado */
+  font-size: 30px;
   font-family: 'Oswald', sans-serif;
 }
 
@@ -54,17 +58,16 @@ p{
   margin-left: 500px;
 }
 .custom-button {
-  background-color: #515151; /* Color de fondo personalizado (en este caso, naranja) */
-  color: #FFFFFF; /* Color de texto */
-  border: none; /* Sin borde */
-  padding: 10px 20px; /* Relleno del botón */
-  cursor: pointer; /* Cambia el cursor al pasar por encima */
-
+  background-color: #515151; 
+  color: #FFFFFF; 
+  border: none; 
+  padding: 10px 20px; 
+  cursor: pointer; 
 }
 .content-window {
   display: inline-block;
-  background-color: #fff; /* Fondo blanco */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra */
+  background-color: #fff; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   padding: 15px;
   max-width: 600px;
   max-height:700px;
