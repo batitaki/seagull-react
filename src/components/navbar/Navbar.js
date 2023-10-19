@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import logo from './logoseagull.png';
 import './Navbar.css';
 
-function Navbar({ onEscuelaClick, onProductClick }) {
+function Navbar({ onEscuelaClick, onProductClick, onFotosClick}) {
   const [isExpanded, setExpanded] = useState(false);
+
 
   const toggleNavbarAndOptions = (e) => {
     e.preventDefault();
@@ -37,6 +38,9 @@ function Navbar({ onEscuelaClick, onProductClick }) {
                 </a>
                 <a className="nav-link" href="#" onClick={onEscuelaClick}>
               ESCUELAS
+                </a>
+                <a className="nav-link" href="#" onClick={onFotosClick}>
+              FOTOS
                 </a>
 
               </div>

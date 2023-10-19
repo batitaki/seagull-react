@@ -1,0 +1,6 @@
+/* fotosCarousel.css */
+.carousel img {
+  max-height: 100vh; /* Establece la altura máxima al 80% de la altura de la ventana */
+  margin: 0 auto; /* Centra las imágenes horizontalmente */
+  max-width: 50%; /* Asegura que las imágenes no superen el ancho de la ventana */
+}
