@@ -77,6 +77,7 @@ function EscuelaMetricsComponent() {
               <div className="selected-escuela-details">
                 <p className='description'>Nombre: {selectedEscuela.nombre}</p>
                 <p className='description'>Descripción: {selectedEscuela.descripcion}</p>
+                <p className='description'>Ubicacion: {selectedEscuela.ubicacion}</p>
               </div>
             )}
           </div>

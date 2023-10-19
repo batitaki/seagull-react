@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from './logoseagull.png';
+import logo from './fotoLogo.png';
 import './Navbar.css';
 
 function Navbar({ onEscuelaClick, onProductClick, onFotosClick}) {
@@ -15,7 +15,7 @@ function Navbar({ onEscuelaClick, onProductClick, onFotosClick}) {
     <div className={`sidebar ${isExpanded ? 'navbar-expanded' : ''}`}>
       <nav className="navbar">
         <a className="navbar-brand" href="/">
-          <img src={logo} alt="" width="45" height="34" style={{ margin: '10px' }} />
+          <img src={logo} alt="" width="75" height="64" style={{ margin: '1px' }} />
         </a>
         <div className="navbar-nav">
           <ul className="navbar-nav">

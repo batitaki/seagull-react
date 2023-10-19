@@ -1,14 +1,14 @@
 import React from 'react';
 import './fotosCarousel.css';
 
-import imagen1 from './carousel.jpg'; // Importa la primera imagen
-import imagen2 from './900_Surf-Posters_PRINT_26.jpg'; // Importa la primera imagen
-import imagen3 from './vintage.jpg'; // Importa la primera imagen
+import imagen1 from './carousel.jpg'; 
+import imagen2 from './900_Surf-Posters_PRINT_26.jpg';
+import imagen3 from './vintage.jpg'; 
 
 function FotosCarousel() {
   const carouselStyle = {
-    margin: '25px', // Ajusta los márgenes
-    width: 'calc(100% - 55px)', // Ajusta el ancho con margen izquierdo y derecho
+    margin: '25px', 
+    width: 'calc(100% - 55px)', 
   };
 
   return (
@@ -23,7 +23,6 @@ function FotosCarousel() {
         <div className="carousel-item">
           <img src={imagen3} alt="Imagen 3" />
         </div>
-        {/* Agrega más imágenes como sea necesario */}
       </div>
      
       <a className="carousel-control-next" href="#fotosCarousel" role="button" data-bs-slide="next">
