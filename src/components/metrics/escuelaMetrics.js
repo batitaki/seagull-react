@@ -4,7 +4,7 @@ import './metrics.css';
 function EscuelaMetricsComponent() {
   const [totalEscuelas, setTotalEscuelas] = useState(0);
   const [escuela, setEscuela] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [, setLoading] = useState(true);
   const [showMetrics, setShowMetrics] = useState(false);
   const [selectedEscuela, setSelectedEscuela] = useState(null);
 
@@ -62,7 +62,7 @@ function EscuelaMetricsComponent() {
               {escuela.map((escuelaItem) => (
                 <li key={escuelaItem.id}>
                   <a className="enlace"
-                    href="#"
+                    href="#p"
                     onClick={() => loadEscuelaDetails(escuelaItem.id)}
                     style={{ textDecoration: 'underline', cursor: 'pointer' }}
                   >
