@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import Navbar from './components/navbar/Navbar';
 import ProductMetricsComponent from './components/metrics/productMetrics'; 
 import EscuelaMetricsComponent from './components/metrics/escuelaMetrics'; 
-import FotosCarousel from './components/fotos/fotosCarousel'; // Importa el componente FotosCarousel
+import FotosCarousel from './components/fotos/fotosCarousel'; 
 import backgroundImage from './imagen-fondo.jpg'; 
-import 'bootstrap/dist/css/bootstrap.min.css'; // Importa los estilos de Bootstrap
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Importa los scripts de Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './App.css';
 
 function App() {
@@ -37,10 +37,10 @@ function App() {
       <Navbar onProductClick={handleProductClick} onEscuelaClick={handleEscuelaClick} onFotosClick={handleFotosClick} />
 
       </div>
-      <img src={backgroundImage} alt="" style={{ width: '100%', height: '190vh', position:'absolute', top: 0, left: 0, zIndex: -1 }} />
+      <img src={backgroundImage} alt="" style={{ width: '100%', height: '210vh', position:'absolute', top: 0, left: 0, zIndex: -1 }} />
       {showProductMetrics && <ProductMetricsComponent style={{ zIndex: 1 }} />} 
-      {showEscuelaMetrics && <EscuelaMetricsComponent style={{ zIndex: 1 }} />} {/* Corrección */}
-      {showCarousel && <FotosCarousel />} {/* Muestra FotosCarousel cuando showCarousel es true */}
+      {showEscuelaMetrics && <EscuelaMetricsComponent style={{ zIndex: 1 }} />} 
+      {showCarousel && <FotosCarousel />}
     </div>
   );
 }

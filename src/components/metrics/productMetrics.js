@@ -33,8 +33,7 @@ function ProductMetricsComponent() {
   const toggleMetrics = () => {
     setShowMetrics(!showMetrics);
   };
-
-  // Código para agrupar productos por categoría
+  
   const productosPorCategoria = {};
 
   producto.forEach((product) => {
